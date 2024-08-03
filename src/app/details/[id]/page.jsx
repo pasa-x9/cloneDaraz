@@ -20,7 +20,7 @@ function page({params}) {
         <Link href={`/category/${product.category}`}><div className=' text-sm py-2'>Category: {product.category}</div></Link>
           <div className="flex flex-col gap-2 ">
             <div className="sm:text-[0.94vw] text-[2.6vw]">Price: ${product.price}</div>
-            <div className="sm:text-[0.94vw] text-[2.6vw]">Rating: {product.rating && product.rating.rate}<span className="text-yellow-500 inline-flex">★</span></div>
+            <div className="sm:text-[0.94vw] text-[2.6vw]">Rating: {product.rating && product.rating.rate}<span className="text-yellow-500 inline">★</span></div>
             <button className="w-fit sm:text-[1vw] text-[3.2vw] bg-orange-600 text-white rounded-sm hover:bg-slate-800 hover:scale-[1.04] p-1 px-2" aria-label="Order now">Order Now <TiShoppingCart className="inline-flex"/></button>
           </div>        
         </div>
