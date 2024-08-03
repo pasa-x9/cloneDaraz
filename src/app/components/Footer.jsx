@@ -3,20 +3,20 @@ import React from 'react'
 function Footer() {
   return (
     <>
-      <footer className='bg-slate-200 mt-10 pt-4'>
+      <footer className='bg-slate-200 pt-4'>
         <div className="container grid grid-cols-2 sm:grid-cols-3">
           <div>
             <h3 className='font-bold py-2'>Customer Care</h3>
-            <ul className='sm:text-[0.9vw]'>
+            <ul className='md:text-sm'>
               <li><a href="">Help Center</a></li>
               <li><a href="">How to Buy</a></li>
               <li><a href="">Returns & Refunds</a></li>
-              <li><a href="">Contact Us</a></li>  
+              <li><a href="">Contact Us</a></li>
             </ul>
           </div>
           <div>
             <h3 className='font-bold py-2'>Daraz</h3>
-            <ul className='sm:text-[0.9vw]'>
+            <ul className='md:text-sm'>
               <li><a href="">About Daraz</a></li>
               <li><a href="">Careers</a></li>
               <li><a href="">Daraz Blog</a></li>
@@ -37,7 +37,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <section className='text-center text-white bg-orange-600 mt-10 p-8 sm:p-2'>© Daraz 2024</section>
+        <section className='text-center text-white bg-orange-600 mt-10 p-8 sm:p-2'>© Daraz By Pasa</section>
       </footer>
     </>
   )

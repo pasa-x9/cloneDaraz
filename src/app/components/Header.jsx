@@ -6,14 +6,14 @@ import Link from 'next/link';
 
 function Header() {
   useEffect(() => {
-    window.addEventListener('scroll',()=>{
-      if(window.scrollY > 40){
-          document.querySelector('header').classList.add('new')
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        document.querySelector('header').classList.add('new')
       }
-      else{
-          document.querySelector('header').classList.remove('new')
+      else {
+        document.querySelector('header').classList.remove('new')
       }
-  })
+    })
 
   }, []);
   return (
@@ -23,10 +23,10 @@ function Header() {
           <div className="container flex justify-between items-center text-nowrap">
             <div className='w-fit'>
               <ul className='flex gap-4 text-[6.5px] sm:text-[0.8vw] w-ful'>
-              <li><a href="">Become a Seller</a></li>
-              <li><a href="">Payments & Recharge</a></li>
-              <li><a href=""> Help & Support</a></li>
-              <li><a href="">Daraz Logistics Partner</a></li>
+                <li><a href="">Become a Seller</a></li>
+                <li><a href="">Payments & Recharge</a></li>
+                <li><a href=""> Help & Support</a></li>
+                <li><a href="">Daraz Logistics Partner</a></li>
               </ul>
             </div>
             <div className='w-fit text-[10px] sm:text-[0.9vw]'>
@@ -37,15 +37,15 @@ function Header() {
         <nav className='py-3 bg-orange-600'>
           <div className="container flex items-center justify-between">
             <div className='w-[15%] sm:w-[10%]'>
-             <Link href='/'> <img src="https://icms-image.slatic.net/images/ims-web/e6ac6883-1158-4663-bda4-df5a1aa066e5.png" alt="logo" className='w-full' /></Link>
+              <Link href='/'> <img src="https://icms-image.slatic.net/images/ims-web/e6ac6883-1158-4663-bda4-df5a1aa066e5.png" alt="logo" className='w-full' /></Link>
             </div>
             <div className='w-[60%]'>
-              <input type="search" placeholder='Search in Daraz' className='w-full rounded-xl bg-white px-4 py-2 text-sm text-black focus:outline-none'/>
+              <input type="search" placeholder='Search in Daraz' className='w-full rounded-xl bg-white px-4 py-2 text-sm text-black focus:outline-none' />
             </div>
             <div className='w-[20%] flex items-center text-[8.8px] sm:text-[1.1vw] justify-between gap-1'>
-              <span><Link href=''>{/*<IoPersonSharp className='inline-block'/>*/}Login</Link></span>
+              <span><Link href='/login'>{/*<IoPersonSharp className='inline-block'/>*/}Login</Link></span>
               <span>|</span>
-              <span><a href=''>Sign Up</a></span>
+              <span><Link href='/login/register'>Sign Up</Link></span>
               <span className='text-[16px] sm:text-[1.8vw]'><a href=''><TiShoppingCart /></a></span>
             </div>
           </div>

@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
+.container {
     border: 1px solid rgba(0, 0, 0, 0);
-    padding: 0 10px ;
+    padding: 0 10px;
 }
+
 section span {
     width: 100%;
     display: block;
@@ -13,28 +14,53 @@ section span {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-footer{
-    ul{
-    color: #0d115b;
-    font-size: 12px;
+
+footer {
+    ul {
+        color: #0d115b;
+        font-size: 12px;
     }
-    h3{
+
+    h3 {
         color: #0f136d;
     }
 }
-.new{
+
+.new {
     position: sticky;
     top: 0px;
     left: 0%;
     z-index: 999;
-    section{
+
+    section {
         display: none;
         transition: 0.9s;
     }
 }
-button{
+
+button {
     transition: 0.4s;
 }
+
 /* .card{
     padding: 0 0;
 } */
+input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.173);
+    border-radius: 2px 2px;
+    padding: 4px;
+}
+.h-ani{
+    animation: h-ani 2s linear;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+@keyframes h-ani {
+    0% {
+        width: 1%;
+    }
+    100% {
+        width: 100%;
+    }
+}
