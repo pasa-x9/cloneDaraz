@@ -18,6 +18,7 @@ import { InfinitySpin } from 'react-loader-spinner';
 import Link from "next/link";
 import { TiShoppingCart } from "react-icons/ti";
 import Sale from "./Sale";
+import Catg from "./category/Catg";
 
 export default function Home() {
   let [products, setProducts] = useState([]);
@@ -85,14 +86,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <Catg/>
       <Sale />
 
       <section className="py-4">
         <h1 className="container sm:text-2xl text-xl font-semibold my-6">Just For You</h1>
         <div className="container grid sm:grid-cols-4 md:grid-cols-6 grid-cols-2 gap-4">
           {products.map((a) => (
-            <div className="shadow-lg outline outline-1 outline-slate-200 p-2 sm:h-fit text-nowrap relative">
+            <div key={a.id} className="shadow-lg outline outline-1 outline-slate-200 p-2 sm:h-fit text-nowrap relative">
               <Link href={`/details/${a.id}`}>
                 <img className="sm:h-[26vh] h-[18vh]" src={a.image} alt='products' />
                 <h2 className="my-2"><span className="">{a.title}</span></h2>

@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { TiShoppingCart } from 'react-icons/ti';
-import { InfinitySpin } from 'react-loader-spinner';
 
 function Sale() {
   let [products, setProducts] = useState([]);
@@ -12,7 +11,6 @@ function Sale() {
       .then(res => res.json())
       .then(json => {
         setProducts(json);
-        setLoading(false);
       })
       .catch(error => {
         console.error('Error fetching products:', error);
@@ -21,13 +19,13 @@ function Sale() {
 
   return (
     <>
-      <section className="py-4">
-        <h1 className="container sm:text-2xl text-xl font-bold my-6">Flash Sale</h1>
+      <section>
+        <h1 className="container sm:text-2xl text-xl font-bold my-4">Flash Sale</h1>
         <div className='container shadow-2xl outline outline-1 outline-slate-100 card sm:rounded-none rounded-xl'>
           <h2 className='p-4 text-orange-600 sm:text-base text-xs font-[600] border-b-[1px]'>On Sale Now</h2>
           <div className="grid sm:grid-cols-4 md:grid-cols-6 grid-cols-2 gap-2 py-4">
             {products.slice(0, 6).map((a) => (
-              <div className=" p-2 sm:h-fit text-nowrap hover:shadow-2xl hover:outline outline-1 outline-slate-200 hover:scale-[1.04] duration-500">                <Link href={`/details/${a.id}`}>
+              <div key={a.id} className=" p-2 sm:h-fit text-nowrap hover:shadow-2xl hover:outline outline-1 outline-slate-200 hover:scale-[1.04] duration-500">                <Link href={`/details/${a.id}`}>
                 <img className="sm:h-[26vh] h-[18vh]" src='https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg' alt='products' />
                 <h2 className="my-2"><span className="">{a.title}</span></h2>
               </Link>

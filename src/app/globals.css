@@ -64,3 +64,10 @@ input {
         width: 100%;
     }
 }
+.drop-down:hover ul{
+    display: block;
+    li{
+        padding: 3px 0;
+        color: rgba(37, 35, 74, 0.86);
+    }
+} 

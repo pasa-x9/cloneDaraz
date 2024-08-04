@@ -14,10 +14,10 @@ function page({ params }) {
   return (
     <>
       <section className="py-4">
-        <h1 className="container sm:text-2xl text-xl font-bold my-6 uppercase ">{products.length > 0 ? products[0].category : 'Loading...'}</h1>
-        <div className="container grid sm:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-8 w-[80vw]">
+        <h1 className="container sm:text-2xl text-xl font-bold my-6 uppercase">{products.length > 0 ? products[0].category : 'Loading...'}</h1>
+        <div className="container grid sm:grid-cols-2 md:grid-cols-2 grid-cols-2 gap-8 w-fit">
           {products.map((a) => (
-            <div className="shadow-lg outline outline-1 outline-slate-200 p-2 sm:h-fit h-fit text-nowrap relative">
+            <div key={a.id} className="shadow-lg outline outline-1 outline-slate-200 p-2 sm:h-fit h-fit text-nowrap relative">
               <Link href={`/details/${a.id}`}>
                 <img className="sm:h-[26vh] h-[18vh]" src={a.image} alt='products' />
                 <h2 className="my-2"><span className="">{a.title}</span></h2>
